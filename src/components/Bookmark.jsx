@@ -40,21 +40,10 @@ export const Bookmark = ({ item }) => {
     setBookmarkDescription(item.description);
     setBookmarkUrl(item.url);
     setBookmarkDataId(item._id);
-    // const res = await fetch("https://v1.appbackend.io/v1/rows/PQJGOeAfm5jZ", {
-    //   method: "PUT",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({ _id: item._id, title, description, url }),
-    // });
-    // const data = await res.json();
-    // console.log(data);
-    // router.refresh();
-    // setEditMode(false);
   }
 
   return (
-    <div className="bg-white rounded-xl p-4 shadow gap-4">
+    <div className="bg-white rounded-xl p-4 shadow gap-4 flex flex-col justify-between">
       <div className="flex">
         <div className="flex-1">
           <div>{item.title}</div>
